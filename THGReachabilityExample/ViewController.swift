@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set up a callback
         theInternets.startMonitoring { (reachable) -> Void in
             println("Internet reachability: \(reachable.isReachable)")
             println("Using celular: \(reachable.isCellular)")
@@ -26,11 +27,13 @@ class ViewController: UIViewController {
             println("Host reachability: \(reachable.isReachable)")
         }
         
+        // Synchronous check
         println("Reachability to host \(hostname): \(theHost.reachable.isReachable)")
         
     }
     
     required init(coder aDecoder: NSCoder) {
+        // Create a Reachability instance
         theInternets = Reachability.reachabilityForInternetConnection()
         theHost = Reachability.reachabilityForHostname(hostname)
         
