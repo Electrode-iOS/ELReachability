@@ -2,7 +2,7 @@
 
 Soothsayer provides the `THGReachability` module.
 
-`THGReachability` is intended to provide a simple API to check network reachability. `THGLocation` is also designed to work well with, and to utilize other libraries in [TheHolyGrail](https://github.com/TheHolyGrail), or THG for short.
+`THGReachability` is intended to provide a simple API to check network reachability. `THGReachability` is also designed to work well with, and to utilize other libraries in [TheHolyGrail](https://github.com/TheHolyGrail), or THG for short.
 
 ## Usage
 
