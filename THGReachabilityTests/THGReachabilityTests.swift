@@ -10,14 +10,60 @@ import UIKit
 import XCTest
 import THGReachability
 
+/**
+ All tests assume that a working internet connection is available.
+*/
 class THGReachabilityTests: XCTestCase {
     
-    /**
-     Assumes internet connection is available for testing.
-    */
-    func testSynchronousReachable() {
+    // MARK: Test Hosts
+    
+    let nonExistantTestHost = "www.sumrandomfakedomain.com"
+    let existantTestHost = "www.google.com"
+    
+    // MARK: Tests
+    
+    func testSynchronousReachableInternet() {
         let theInternets = Reachability.reachabilityForInternetConnection()
         let isReachable = theInternets.reachable.isReachable
         XCTAssertTrue(isReachable)
+    }
+    
+    func testSynchronousReachableHost() {
+        let theHosts = Reachability.reachabilityForHostname(existantTestHost)
+        let isReachable = theHosts.reachable.isReachable
+        XCTAssertTrue(isReachable)
+    }
+    
+    func testSynchronousUnreachableHost() {
+        let theHosts = Reachability.reachabilityForHostname(nonExistantTestHost)
+        let isReachable = theHosts.reachable.isReachable
+        XCTAssertFalse(isReachable)
+    }
+    
+    func testReachableHost() {
+        let theHosts = Reachability.reachabilityForHostname(existantTestHost)
+        let expectation = expectationWithDescription("Start monitoring called")
+        
+        theHosts.startMonitoring { (reachable) -> Void in
+            println("Internet reachability: \(reachable.isReachable)")
+            println("Using celular: \(reachable.isCellular)")
+            
+            XCTAssertTrue(reachable.isReachable)
+            expectation.fulfill()
+        }
+        
+        waitForExpectationsWithTimeout(3, handler: nil)
+    }
+    
+    func testUnreachableHost() {
+        let theHosts = Reachability.reachabilityForHostname(nonExistantTestHost)
+        let expectation = expectationWithDescription("Start monitoring called")
+        
+        theHosts.startMonitoring { (reachable) -> Void in
+            XCTAssertFalse(reachable.isReachable)
+            expectation.fulfill()
+        }
+        
+        waitForExpectationsWithTimeout(3, handler: nil)
     }
 }
