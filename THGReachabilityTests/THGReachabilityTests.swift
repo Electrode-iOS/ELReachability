@@ -8,29 +8,16 @@
 
 import UIKit
 import XCTest
+import THGReachability
 
 class THGReachabilityTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    /**
+     Assumes internet connection is available for testing.
+    */
+    func testSynchronousReachable() {
+        let theInternets = Reachability.reachabilityForInternetConnection()
+        let isReachable = theInternets.reachable.isReachable
+        XCTAssertTrue(isReachable)
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
