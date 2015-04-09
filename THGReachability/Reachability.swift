@@ -67,13 +67,11 @@ public final class Reachability {
     :param: callback The closure that will be called when reachability changes.
     :returns: `true` if the monitoring was set up. `false` otherwise.
     */
-    public func startMonitoring(callback: ReachabilityCallbackClosure!) -> Bool {
+    public func startMonitoring(callback: ReachabilityCallbackClosure) -> Bool {
         var monitoringStarted =  objc_startMonitoring(reachability) { () -> Void in
-            if callback != nil {
-                var flags: SCNetworkReachabilityFlags = 0
-                SCNetworkReachabilityGetFlags(self.reachability, &flags)
-                callback(reachable: Reachable(flags: flags))
-            }
+            var flags: SCNetworkReachabilityFlags = 0
+            SCNetworkReachabilityGetFlags(self.reachability, &flags)
+            callback(reachable: Reachable(flags: flags))            
         }
         
         return monitoringStarted.boolValue
