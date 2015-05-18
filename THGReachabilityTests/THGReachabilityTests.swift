@@ -40,17 +40,6 @@ class THGReachabilityTests: XCTestCase {
         XCTAssertFalse(isReachable)
     }
     
-    func testStartMonitoringReachableInternet() {
-        let theInternets = Reachability.reachabilityForInternetConnection()
-        let expectation = expectationWithDescription("Start monitoring called")
-        
-        theInternets.startMonitoring { (reachable) -> Void in
-            XCTAssertTrue(reachable.isReachable)
-            expectation.fulfill()
-        }
-        
-        waitForExpectationsWithTimeout(3, handler: nil)
-    }
     
     func testStartMonitoringReachableHost() {
         let theHosts = Reachability.reachabilityForHostname(existantTestHost)
