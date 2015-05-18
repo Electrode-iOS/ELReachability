@@ -10,10 +10,10 @@ import Foundation
 import SystemConfiguration
 
 @asmname("objc_startMonitoring")
-internal func objc_startMonitoring(SCNetworkReachability!, dispatch_block_t!) -> ObjCBool
+internal func objc_startMonitoring(SCNetworkReachability, dispatch_block_t) -> ObjCBool
 
 @asmname("objc_stopMonitoring")
-internal func objc_stopMonitoring(SCNetworkReachability!) -> ObjCBool
+internal func objc_stopMonitoring(SCNetworkReachability) -> ObjCBool
 
 public struct Reachable {
     /// The actual flags reported by the system. This is used to compute if the network is reachable.

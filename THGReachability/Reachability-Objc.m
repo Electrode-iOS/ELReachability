@@ -13,9 +13,6 @@ static void objc_ReachabilityCallback(SCNetworkReachabilityRef networkReachabili
 {
     // this has the pointer to our swift callback block/closure.
     dispatch_block_t block = (__bridge dispatch_block_t)info;
-
-    NSLog(@"callback was hit.");
-
     block();
 }
 
