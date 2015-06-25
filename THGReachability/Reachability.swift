@@ -53,6 +53,11 @@ public final class Reachability {
         return Reachable(flags: flags)
     }
     
+    // TODO: Something is wrong with the class design if i need to do this.
+    public var isReachable: Bool {
+        return self.reachable.isReachable
+    }
+    
     init(reachability: SCNetworkReachability) {
         self.reachability = reachability
     }
