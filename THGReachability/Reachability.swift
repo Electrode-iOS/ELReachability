@@ -48,7 +48,7 @@ public final class Reachability {
     Use this if you want to do a synchronous check. If you want notification of changes, see `startMonitoring`.
     */
     public var reachable: Reachable {
-        assert(isMonitoring == true, "Error: Cannot call the synchronous API while monitoring")
+        assert(isMonitoring == false, "Error: Cannot call the synchronous API while monitoring")
         var flags = SCNetworkReachabilityFlags(rawValue:0)
         if SCNetworkReachabilityGetFlags(reachability, &flags) != 0 {
             return Reachable(flags: flags)
