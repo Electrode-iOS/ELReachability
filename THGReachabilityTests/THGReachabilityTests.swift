@@ -23,45 +23,61 @@ class THGReachabilityTests: XCTestCase {
     // MARK: Tests
     
     func testSynchronousReachableInternet() {
-        let theInternets = Reachability.reachabilityForInternetConnection()
-        let isReachable = theInternets.reachable.isReachable
-        XCTAssertTrue(isReachable)
+        if let theInternets = Reachability.reachabilityForInternetConnection() {
+            let isReachable = theInternets.reachable.isReachable
+            XCTAssertTrue(isReachable)
+        } else {
+            XCTAssert(false, "Failed")
+        }
     }
     
     func testSynchronousReachableHost() {
-        let theHosts = Reachability.reachabilityForHostname(existantTestHost)
-        let isReachable = theHosts.reachable.isReachable
-        XCTAssertTrue(isReachable)
+        if let theHosts = Reachability.reachabilityForHostname(existantTestHost) {
+            let isReachable = theHosts.reachable.isReachable
+                XCTAssertTrue(isReachable)
+        } else {
+            XCTAssert(false, "Failed")
+        }
+
     }
     
     func testSynchronousUnreachableHost() {
-        let theHosts = Reachability.reachabilityForHostname(nonExistantTestHost)
-        let isReachable = theHosts.reachable.isReachable
-        XCTAssertFalse(isReachable)
+        if let theHosts = Reachability.reachabilityForHostname(nonExistantTestHost) {
+            let isReachable = theHosts.reachable.isReachable
+            XCTAssertFalse(isReachable)
+        } else {
+            XCTAssert(false, "Failed")
+        }
     }
     
     
     func testStartMonitoringReachableHost() {
-        let theHosts = Reachability.reachabilityForHostname(existantTestHost)
-        let expectation = expectationWithDescription("Start monitoring called")
-        
-        theHosts.startMonitoring { (reachable) -> Void in
-            XCTAssertTrue(reachable.isReachable)
-            expectation.fulfill()
+        if let theHosts = Reachability.reachabilityForHostname(existantTestHost) {
+            let expectation = expectationWithDescription("Start monitoring called")
+            
+            theHosts.startMonitoring { (reachable) -> Void in
+                XCTAssertTrue(reachable.isReachable)
+                expectation.fulfill()
+            }
+            
+            waitForExpectationsWithTimeout(3, handler: nil)
+        } else {
+            XCTAssert(false, "Failed")
         }
-        
-        waitForExpectationsWithTimeout(3, handler: nil)
     }
     
     func testStartMonitoringUnreachableHost() {
-        let theHosts = Reachability.reachabilityForHostname(nonExistantTestHost)
-        let expectation = expectationWithDescription("Start monitoring called")
-        
-        theHosts.startMonitoring { (reachable) -> Void in
-            XCTAssertFalse(reachable.isReachable)
-            expectation.fulfill()
+        if let theHosts = Reachability.reachabilityForHostname(nonExistantTestHost) {
+            let expectation = expectationWithDescription("Start monitoring called")
+            
+            theHosts.startMonitoring { (reachable) -> Void in
+                XCTAssertFalse(reachable.isReachable)
+                expectation.fulfill()
+            }
+            
+            waitForExpectationsWithTimeout(3, handler: nil)
+        } else {
+            XCTAssert(false, "Failed")
         }
-        
-        waitForExpectationsWithTimeout(3, handler: nil)
     }
 }
