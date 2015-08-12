@@ -40,7 +40,7 @@ public struct Reachable {
 public typealias ReachabilityCallbackClosure = (reachable: Reachable) -> Void
 
 @objc(THGReachability)
-public final class Reachability {
+public final class Reachability: NSObject {
     private let reachability: SCNetworkReachability
     private var isMonitoring = false
     
@@ -50,7 +50,7 @@ public final class Reachability {
     public var reachable: Reachable {
         assert(isMonitoring == false, "Error: Cannot call the synchronous API while monitoring")
         var flags = SCNetworkReachabilityFlags(rawValue:0)
-        if SCNetworkReachabilityGetFlags(reachability, &flags) != 0 {
+        if SCNetworkReachabilityGetFlags(reachability, &flags) {
             return Reachable(flags: flags)
         } else {
             return Reachable(flags: SCNetworkReachabilityFlags(rawValue:0))

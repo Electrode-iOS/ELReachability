@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         }
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         // Create a Reachability instance
         theInternets = Reachability.reachabilityForInternetConnection()
         theHost = Reachability.reachabilityForHostname(hostname)
