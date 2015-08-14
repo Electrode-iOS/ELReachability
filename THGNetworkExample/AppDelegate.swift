@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  THGReachabilityExample
+//  THGNetworkExample
 //
-//  Created by Sam Grover on 4/6/15.
-//  Copyright (c) 2015 Set Direction. All rights reserved.
+//  Created by Sam Grover on 8/13/15.
+//  Copyright © 2015 The Holy Grail. All rights reserved.
 //
 
 import UIKit

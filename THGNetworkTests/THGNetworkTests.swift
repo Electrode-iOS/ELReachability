@@ -1,15 +1,15 @@
 //
-//  THGReachabilityExampleTests.swift
-//  THGReachabilityExampleTests
+//  THGNetworkTests.swift
+//  THGNetworkTests
 //
-//  Created by Sam Grover on 4/6/15.
-//  Copyright (c) 2015 Set Direction. All rights reserved.
+//  Created by Sam Grover on 8/13/15.
+//  Copyright © 2015 The Holy Grail. All rights reserved.
 //
 
-import UIKit
 import XCTest
+@testable import THGNetwork
 
-class THGReachabilityExampleTests: XCTestCase {
+class THGNetworkTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,14 +21,19 @@ class THGReachabilityExampleTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    // MARK: Tests
+    
+    func testSynchronousReachableInternet() {
+        if let theInternets = NetworkStatus.networkStatusForInternetConnection() {
+            XCTAssertTrue(theInternets.isReachable())
+        } else {
+            XCTAssert(false, "Failed")
+        }
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }

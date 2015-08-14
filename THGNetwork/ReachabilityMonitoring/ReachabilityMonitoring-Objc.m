@@ -1,12 +1,12 @@
 //
-//  Reachability-Objc.m
-//  ReachReach
+//  ReachabilityMonitoring-Objc.m
+//  THGNetwork
 //
 //  Created by Brandon Sneed on 4/2/15.
 //  Copyright (c) 2015 Set Direction. All rights reserved.
 //
 
-#import "Reachability-Objc.h"
+#import "ReachabilityMonitoring-Objc.h"
 @import SystemConfiguration;
 
 static void objc_ReachabilityCallback(SCNetworkReachabilityRef networkReachability, SCNetworkReachabilityFlags flags, void *info)
