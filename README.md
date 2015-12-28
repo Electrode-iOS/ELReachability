@@ -1,27 +1,25 @@
-## Introduction
+# Soothsayer [![Build Status](https://travis-ci.org/TheHolyGrail/Soothsayer.svg)](https://travis-ci.org/TheHolyGrail/Soothsayer)
 
-Soothsayer provides the `THGReachability` module.
-
-`THGReachability` is intended to provide a simple API to check network reachability. `THGReachability` is also designed to work well with, and to utilize other libraries in [TheHolyGrail](https://github.com/TheHolyGrail), or THG for short.
+Soothsayer (`THGNetwork` framework) is a simple Swift API for checking network reachability. `THGNetwork` is also designed to work well with, and to utilize other libraries in [TheHolyGrail](https://github.com/TheHolyGrail), or THG for short.
 
 ## Usage
 
-`THGReachability` can be used to query the current reachability to the internet or to a particular host. It can also be used to receive callbacks when the reachability changes.
+`THGNetwork` can be used to query the current reachability to the internet or to a particular host. It can also be used to receive callbacks when the reachability changes.
 
 Setting up and checking reachability to the internet
 
 ```Swift
-    // Create a Reachability instance
-    let theInternets = Reachability.reachabilityForInternetConnection()
-    
-    // Set up a callback
-    theInternets.startMonitoring { (reachable) -> Void in
-        println("Internet reachability: \(reachable.isReachable)")
-        println("Using celular: \(reachable.isCellular)")
-    }
-    
-    // Synchronous check
-    println("Reachability to internet: \(theInternets.reachable.isReachable)")
+// Create a Reachability instance
+let theInternets = Reachability.reachabilityForInternetConnection()
+
+// Set up a callback
+theInternets.startMonitoring { (reachable) -> Void in
+    println("Internet reachability: \(reachable.isReachable)")
+    println("Using celular: \(reachable.isCellular)")
+}
+
+// Synchronous check
+println("Reachability to internet: \(theInternets.reachable.isReachable)")
 ```
 
 ## Contributions
@@ -62,6 +60,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-
