@@ -1,10 +1,10 @@
-# Soothsayer [![Build Status](https://travis-ci.org/TheHolyGrail/Soothsayer.svg)](https://travis-ci.org/TheHolyGrail/Soothsayer)
+# ELReachability [![Build Status](https://travis-ci.org/Electrode-iOS/ELReachability.svg)](https://travis-ci.org/Electrode-iOS/ELReachability)
 
-Soothsayer (`THGNetwork` framework) is a simple Swift API for checking network reachability. `THGNetwork` is also designed to work well with, and to utilize other libraries in [TheHolyGrail](https://github.com/TheHolyGrail), or THG for short.
+ELReachability (`ELReachability` framework) is a simple Swift API for checking network reachability. `ELReachability` is also designed to work well with, and to utilize other libraries in [Electrode-iOS](https://github.com/Electrode-iOS), or THG for short.
 
 ## Usage
 
-`THGNetwork` can be used to query the current reachability to the internet or to a particular host. It can also be used to receive callbacks when the reachability changes.
+`ELReachability` can be used to query the current reachability to the internet or to a particular host. It can also be used to receive callbacks when the reachability changes.
 
 Setting up and checking reachability to the internet
 
@@ -26,7 +26,7 @@ println("Reachability to internet: \(theInternets.reachable.isReachable)")
 
 We appreciate your contributions to all of our projects and look forward to interacting with you via Pull Requests, the issue tracker, via Twitter, etc.  We're happy to help you, and to have you help us.  We'll strive to answer every PR and issue and be very transparent in what we do.
 
-When contributing code, please refer to our [Dennis](https://github.com/TheHolyGrail/Dennis).
+When contributing code, please refer to our [Dennis](https://github.com/Electrode-iOS/Dennis).
 
 ###### THG's Primary Contributors
 
@@ -41,7 +41,7 @@ Wes Ostler (@wesostler)<br>
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Walmart, TheHolyGrail, and other Contributors
+Copyright (c) 2015 Walmart, WalmartLabs, and other Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

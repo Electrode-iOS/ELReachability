@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		228698151B7D48B100BE8A26 /* THGNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 228698141B7D48B100BE8A26 /* THGNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2286981C1B7D48B100BE8A26 /* THGNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228698111B7D48B100BE8A26 /* THGNetwork.framework */; };
-		228698211B7D48B100BE8A26 /* THGNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228698201B7D48B100BE8A26 /* THGNetworkTests.swift */; };
+		228698151B7D48B100BE8A26 /* ELReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 228698141B7D48B100BE8A26 /* ELReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2286981C1B7D48B100BE8A26 /* ELReachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228698111B7D48B100BE8A26 /* ELReachability.framework */; };
+		228698211B7D48B100BE8A26 /* ELReachabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228698201B7D48B100BE8A26 /* ELReachabilityTests.swift */; };
 		2286982E1B7D4B5B00BE8A26 /* ReachabilityMonitoring-Objc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2286982C1B7D4B5B00BE8A26 /* ReachabilityMonitoring-Objc.h */; };
 		2286982F1B7D4B5B00BE8A26 /* ReachabilityMonitoring-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2286982D1B7D4B5B00BE8A26 /* ReachabilityMonitoring-Objc.m */; };
 		228698311B7D4BFA00BE8A26 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228698301B7D4BFA00BE8A26 /* NetworkStatus.swift */; };
@@ -18,10 +18,10 @@
 		2286983E1B7D63EA00BE8A26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2286983C1B7D63EA00BE8A26 /* Main.storyboard */; };
 		228698401B7D63EA00BE8A26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2286983F1B7D63EA00BE8A26 /* Assets.xcassets */; };
 		228698431B7D63EA00BE8A26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228698411B7D63EA00BE8A26 /* LaunchScreen.storyboard */; };
-		2286984E1B7D63EA00BE8A26 /* THGNetworkExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2286984D1B7D63EA00BE8A26 /* THGNetworkExampleTests.swift */; };
-		228698591B7D63EA00BE8A26 /* THGNetworkExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228698581B7D63EA00BE8A26 /* THGNetworkExampleUITests.swift */; };
-		228698641B7D6B6D00BE8A26 /* THGNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228698111B7D48B100BE8A26 /* THGNetwork.framework */; };
-		228698651B7D6B6D00BE8A26 /* THGNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 228698111B7D48B100BE8A26 /* THGNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2286984E1B7D63EA00BE8A26 /* ELReachabilityExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2286984D1B7D63EA00BE8A26 /* ELReachabilityExampleTests.swift */; };
+		228698591B7D63EA00BE8A26 /* ELReachabilityExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228698581B7D63EA00BE8A26 /* ELReachabilityExampleUITests.swift */; };
+		228698641B7D6B6D00BE8A26 /* ELReachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228698111B7D48B100BE8A26 /* ELReachability.framework */; };
+		228698651B7D6B6D00BE8A26 /* ELReachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 228698111B7D48B100BE8A26 /* ELReachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,28 +30,28 @@
 			containerPortal = 228698081B7D48B100BE8A26 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 228698101B7D48B100BE8A26;
-			remoteInfo = THGNetwork;
+			remoteInfo = ELReachability;
 		};
 		2286984A1B7D63EA00BE8A26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 228698081B7D48B100BE8A26 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 228698351B7D63EA00BE8A26;
-			remoteInfo = THGNetworkExample;
+			remoteInfo = ELReachabilityExample;
 		};
 		228698551B7D63EA00BE8A26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 228698081B7D48B100BE8A26 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 228698351B7D63EA00BE8A26;
-			remoteInfo = THGNetworkExample;
+			remoteInfo = ELReachabilityExample;
 		};
 		228698661B7D6B6D00BE8A26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 228698081B7D48B100BE8A26 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 228698101B7D48B100BE8A26;
-			remoteInfo = THGNetwork;
+			remoteInfo = ELReachability;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -62,7 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				228698651B7D6B6D00BE8A26 /* THGNetwork.framework in Embed Frameworks */,
+				228698651B7D6B6D00BE8A26 /* ELReachability.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,27 +70,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		228698111B7D48B100BE8A26 /* THGNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THGNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		228698141B7D48B100BE8A26 /* THGNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THGNetwork.h; sourceTree = "<group>"; };
+		228698111B7D48B100BE8A26 /* ELReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ELReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		228698141B7D48B100BE8A26 /* ELReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELReachability.h; sourceTree = "<group>"; };
 		228698161B7D48B100BE8A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2286981B1B7D48B100BE8A26 /* THGNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = THGNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		228698201B7D48B100BE8A26 /* THGNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THGNetworkTests.swift; sourceTree = "<group>"; };
+		2286981B1B7D48B100BE8A26 /* ELReachabilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ELReachabilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		228698201B7D48B100BE8A26 /* ELReachabilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELReachabilityTests.swift; sourceTree = "<group>"; };
 		228698221B7D48B100BE8A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2286982C1B7D4B5B00BE8A26 /* ReachabilityMonitoring-Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ReachabilityMonitoring-Objc.h"; sourceTree = "<group>"; };
 		2286982D1B7D4B5B00BE8A26 /* ReachabilityMonitoring-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ReachabilityMonitoring-Objc.m"; sourceTree = "<group>"; };
 		228698301B7D4BFA00BE8A26 /* NetworkStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
-		228698361B7D63EA00BE8A26 /* THGNetworkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = THGNetworkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		228698361B7D63EA00BE8A26 /* ELReachabilityExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ELReachabilityExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228698381B7D63EA00BE8A26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2286983A1B7D63EA00BE8A26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2286983D1B7D63EA00BE8A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2286983F1B7D63EA00BE8A26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		228698421B7D63EA00BE8A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		228698441B7D63EA00BE8A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		228698491B7D63EA00BE8A26 /* THGNetworkExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = THGNetworkExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2286984D1B7D63EA00BE8A26 /* THGNetworkExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THGNetworkExampleTests.swift; sourceTree = "<group>"; };
+		228698491B7D63EA00BE8A26 /* ELReachabilityExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ELReachabilityExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2286984D1B7D63EA00BE8A26 /* ELReachabilityExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELReachabilityExampleTests.swift; sourceTree = "<group>"; };
 		2286984F1B7D63EA00BE8A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		228698541B7D63EA00BE8A26 /* THGNetworkExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = THGNetworkExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		228698581B7D63EA00BE8A26 /* THGNetworkExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THGNetworkExampleUITests.swift; sourceTree = "<group>"; };
+		228698541B7D63EA00BE8A26 /* ELReachabilityExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ELReachabilityExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		228698581B7D63EA00BE8A26 /* ELReachabilityExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELReachabilityExampleUITests.swift; sourceTree = "<group>"; };
 		2286985A1B7D63EA00BE8A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2286981C1B7D48B100BE8A26 /* THGNetwork.framework in Frameworks */,
+				2286981C1B7D48B100BE8A26 /* ELReachability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228698641B7D6B6D00BE8A26 /* THGNetwork.framework in Frameworks */,
+				228698641B7D6B6D00BE8A26 /* ELReachability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,11 +138,11 @@
 		228698071B7D48B100BE8A26 = {
 			isa = PBXGroup;
 			children = (
-				228698131B7D48B100BE8A26 /* THGNetwork */,
-				2286981F1B7D48B100BE8A26 /* THGNetworkTests */,
-				228698371B7D63EA00BE8A26 /* THGNetworkExample */,
-				2286984C1B7D63EA00BE8A26 /* THGNetworkExampleTests */,
-				228698571B7D63EA00BE8A26 /* THGNetworkExampleUITests */,
+				228698131B7D48B100BE8A26 /* ELReachability */,
+				2286981F1B7D48B100BE8A26 /* ELReachabilityTests */,
+				228698371B7D63EA00BE8A26 /* ELReachabilityExample */,
+				2286984C1B7D63EA00BE8A26 /* ELReachabilityExampleTests */,
+				228698571B7D63EA00BE8A26 /* ELReachabilityExampleUITests */,
 				228698121B7D48B100BE8A26 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,33 +150,33 @@
 		228698121B7D48B100BE8A26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				228698111B7D48B100BE8A26 /* THGNetwork.framework */,
-				2286981B1B7D48B100BE8A26 /* THGNetworkTests.xctest */,
-				228698361B7D63EA00BE8A26 /* THGNetworkExample.app */,
-				228698491B7D63EA00BE8A26 /* THGNetworkExampleTests.xctest */,
-				228698541B7D63EA00BE8A26 /* THGNetworkExampleUITests.xctest */,
+				228698111B7D48B100BE8A26 /* ELReachability.framework */,
+				2286981B1B7D48B100BE8A26 /* ELReachabilityTests.xctest */,
+				228698361B7D63EA00BE8A26 /* ELReachabilityExample.app */,
+				228698491B7D63EA00BE8A26 /* ELReachabilityExampleTests.xctest */,
+				228698541B7D63EA00BE8A26 /* ELReachabilityExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		228698131B7D48B100BE8A26 /* THGNetwork */ = {
+		228698131B7D48B100BE8A26 /* ELReachability */ = {
 			isa = PBXGroup;
 			children = (
 				2286982B1B7D4B5B00BE8A26 /* ReachabilityMonitoring */,
-				228698141B7D48B100BE8A26 /* THGNetwork.h */,
+				228698141B7D48B100BE8A26 /* ELReachability.h */,
 				228698161B7D48B100BE8A26 /* Info.plist */,
 				228698301B7D4BFA00BE8A26 /* NetworkStatus.swift */,
 			);
-			path = THGNetwork;
+			path = ELReachability;
 			sourceTree = "<group>";
 		};
-		2286981F1B7D48B100BE8A26 /* THGNetworkTests */ = {
+		2286981F1B7D48B100BE8A26 /* ELReachabilityTests */ = {
 			isa = PBXGroup;
 			children = (
-				228698201B7D48B100BE8A26 /* THGNetworkTests.swift */,
+				228698201B7D48B100BE8A26 /* ELReachabilityTests.swift */,
 				228698221B7D48B100BE8A26 /* Info.plist */,
 			);
-			path = THGNetworkTests;
+			path = ELReachabilityTests;
 			sourceTree = "<group>";
 		};
 		2286982B1B7D4B5B00BE8A26 /* ReachabilityMonitoring */ = {
@@ -188,7 +188,7 @@
 			path = ReachabilityMonitoring;
 			sourceTree = "<group>";
 		};
-		228698371B7D63EA00BE8A26 /* THGNetworkExample */ = {
+		228698371B7D63EA00BE8A26 /* ELReachabilityExample */ = {
 			isa = PBXGroup;
 			children = (
 				228698381B7D63EA00BE8A26 /* AppDelegate.swift */,
@@ -198,25 +198,25 @@
 				228698411B7D63EA00BE8A26 /* LaunchScreen.storyboard */,
 				228698441B7D63EA00BE8A26 /* Info.plist */,
 			);
-			path = THGNetworkExample;
+			path = ELReachabilityExample;
 			sourceTree = "<group>";
 		};
-		2286984C1B7D63EA00BE8A26 /* THGNetworkExampleTests */ = {
+		2286984C1B7D63EA00BE8A26 /* ELReachabilityExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				2286984D1B7D63EA00BE8A26 /* THGNetworkExampleTests.swift */,
+				2286984D1B7D63EA00BE8A26 /* ELReachabilityExampleTests.swift */,
 				2286984F1B7D63EA00BE8A26 /* Info.plist */,
 			);
-			path = THGNetworkExampleTests;
+			path = ELReachabilityExampleTests;
 			sourceTree = "<group>";
 		};
-		228698571B7D63EA00BE8A26 /* THGNetworkExampleUITests */ = {
+		228698571B7D63EA00BE8A26 /* ELReachabilityExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				228698581B7D63EA00BE8A26 /* THGNetworkExampleUITests.swift */,
+				228698581B7D63EA00BE8A26 /* ELReachabilityExampleUITests.swift */,
 				2286985A1B7D63EA00BE8A26 /* Info.plist */,
 			);
-			path = THGNetworkExampleUITests;
+			path = ELReachabilityExampleUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +226,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228698151B7D48B100BE8A26 /* THGNetwork.h in Headers */,
+				228698151B7D48B100BE8A26 /* ELReachability.h in Headers */,
 				2286982E1B7D4B5B00BE8A26 /* ReachabilityMonitoring-Objc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,9 +234,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		228698101B7D48B100BE8A26 /* THGNetwork */ = {
+		228698101B7D48B100BE8A26 /* ELReachability */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 228698251B7D48B100BE8A26 /* Build configuration list for PBXNativeTarget "THGNetwork" */;
+			buildConfigurationList = 228698251B7D48B100BE8A26 /* Build configuration list for PBXNativeTarget "ELReachability" */;
 			buildPhases = (
 				2286980C1B7D48B100BE8A26 /* Sources */,
 				2286980D1B7D48B100BE8A26 /* Frameworks */,
@@ -247,14 +247,14 @@
 			);
 			dependencies = (
 			);
-			name = THGNetwork;
-			productName = THGNetwork;
-			productReference = 228698111B7D48B100BE8A26 /* THGNetwork.framework */;
+			name = ELReachability;
+			productName = ELReachability;
+			productReference = 228698111B7D48B100BE8A26 /* ELReachability.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2286981A1B7D48B100BE8A26 /* THGNetworkTests */ = {
+		2286981A1B7D48B100BE8A26 /* ELReachabilityTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 228698281B7D48B100BE8A26 /* Build configuration list for PBXNativeTarget "THGNetworkTests" */;
+			buildConfigurationList = 228698281B7D48B100BE8A26 /* Build configuration list for PBXNativeTarget "ELReachabilityTests" */;
 			buildPhases = (
 				228698171B7D48B100BE8A26 /* Sources */,
 				228698181B7D48B100BE8A26 /* Frameworks */,
@@ -265,14 +265,14 @@
 			dependencies = (
 				2286981E1B7D48B100BE8A26 /* PBXTargetDependency */,
 			);
-			name = THGNetworkTests;
-			productName = THGNetworkTests;
-			productReference = 2286981B1B7D48B100BE8A26 /* THGNetworkTests.xctest */;
+			name = ELReachabilityTests;
+			productName = ELReachabilityTests;
+			productReference = 2286981B1B7D48B100BE8A26 /* ELReachabilityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		228698351B7D63EA00BE8A26 /* THGNetworkExample */ = {
+		228698351B7D63EA00BE8A26 /* ELReachabilityExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2286985B1B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "THGNetworkExample" */;
+			buildConfigurationList = 2286985B1B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "ELReachabilityExample" */;
 			buildPhases = (
 				228698321B7D63EA00BE8A26 /* Sources */,
 				228698331B7D63EA00BE8A26 /* Frameworks */,
@@ -284,14 +284,14 @@
 			dependencies = (
 				228698671B7D6B6D00BE8A26 /* PBXTargetDependency */,
 			);
-			name = THGNetworkExample;
-			productName = THGNetworkExample;
-			productReference = 228698361B7D63EA00BE8A26 /* THGNetworkExample.app */;
+			name = ELReachabilityExample;
+			productName = ELReachabilityExample;
+			productReference = 228698361B7D63EA00BE8A26 /* ELReachabilityExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		228698481B7D63EA00BE8A26 /* THGNetworkExampleTests */ = {
+		228698481B7D63EA00BE8A26 /* ELReachabilityExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2286985E1B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "THGNetworkExampleTests" */;
+			buildConfigurationList = 2286985E1B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "ELReachabilityExampleTests" */;
 			buildPhases = (
 				228698451B7D63EA00BE8A26 /* Sources */,
 				228698461B7D63EA00BE8A26 /* Frameworks */,
@@ -302,14 +302,14 @@
 			dependencies = (
 				2286984B1B7D63EA00BE8A26 /* PBXTargetDependency */,
 			);
-			name = THGNetworkExampleTests;
-			productName = THGNetworkExampleTests;
-			productReference = 228698491B7D63EA00BE8A26 /* THGNetworkExampleTests.xctest */;
+			name = ELReachabilityExampleTests;
+			productName = ELReachabilityExampleTests;
+			productReference = 228698491B7D63EA00BE8A26 /* ELReachabilityExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		228698531B7D63EA00BE8A26 /* THGNetworkExampleUITests */ = {
+		228698531B7D63EA00BE8A26 /* ELReachabilityExampleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 228698611B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "THGNetworkExampleUITests" */;
+			buildConfigurationList = 228698611B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "ELReachabilityExampleUITests" */;
 			buildPhases = (
 				228698501B7D63EA00BE8A26 /* Sources */,
 				228698511B7D63EA00BE8A26 /* Frameworks */,
@@ -320,9 +320,9 @@
 			dependencies = (
 				228698561B7D63EA00BE8A26 /* PBXTargetDependency */,
 			);
-			name = THGNetworkExampleUITests;
-			productName = THGNetworkExampleUITests;
-			productReference = 228698541B7D63EA00BE8A26 /* THGNetworkExampleUITests.xctest */;
+			name = ELReachabilityExampleUITests;
+			productName = ELReachabilityExampleUITests;
+			productReference = 228698541B7D63EA00BE8A26 /* ELReachabilityExampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -354,7 +354,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2286980B1B7D48B100BE8A26 /* Build configuration list for PBXProject "THGNetwork" */;
+			buildConfigurationList = 2286980B1B7D48B100BE8A26 /* Build configuration list for PBXProject "ELReachability" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -367,11 +367,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				228698101B7D48B100BE8A26 /* THGNetwork */,
-				2286981A1B7D48B100BE8A26 /* THGNetworkTests */,
-				228698351B7D63EA00BE8A26 /* THGNetworkExample */,
-				228698481B7D63EA00BE8A26 /* THGNetworkExampleTests */,
-				228698531B7D63EA00BE8A26 /* THGNetworkExampleUITests */,
+				228698101B7D48B100BE8A26 /* ELReachability */,
+				2286981A1B7D48B100BE8A26 /* ELReachabilityTests */,
+				228698351B7D63EA00BE8A26 /* ELReachabilityExample */,
+				228698481B7D63EA00BE8A26 /* ELReachabilityExampleTests */,
+				228698531B7D63EA00BE8A26 /* ELReachabilityExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -431,7 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228698211B7D48B100BE8A26 /* THGNetworkTests.swift in Sources */,
+				228698211B7D48B100BE8A26 /* ELReachabilityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2286984E1B7D63EA00BE8A26 /* THGNetworkExampleTests.swift in Sources */,
+				2286984E1B7D63EA00BE8A26 /* ELReachabilityExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228698591B7D63EA00BE8A26 /* THGNetworkExampleUITests.swift in Sources */,
+				228698591B7D63EA00BE8A26 /* ELReachabilityExampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,22 +465,22 @@
 /* Begin PBXTargetDependency section */
 		2286981E1B7D48B100BE8A26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 228698101B7D48B100BE8A26 /* THGNetwork */;
+			target = 228698101B7D48B100BE8A26 /* ELReachability */;
 			targetProxy = 2286981D1B7D48B100BE8A26 /* PBXContainerItemProxy */;
 		};
 		2286984B1B7D63EA00BE8A26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 228698351B7D63EA00BE8A26 /* THGNetworkExample */;
+			target = 228698351B7D63EA00BE8A26 /* ELReachabilityExample */;
 			targetProxy = 2286984A1B7D63EA00BE8A26 /* PBXContainerItemProxy */;
 		};
 		228698561B7D63EA00BE8A26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 228698351B7D63EA00BE8A26 /* THGNetworkExample */;
+			target = 228698351B7D63EA00BE8A26 /* ELReachabilityExample */;
 			targetProxy = 228698551B7D63EA00BE8A26 /* PBXContainerItemProxy */;
 		};
 		228698671B7D6B6D00BE8A26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 228698101B7D48B100BE8A26 /* THGNetwork */;
+			target = 228698101B7D48B100BE8A26 /* ELReachability */;
 			targetProxy = 228698661B7D6B6D00BE8A26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -602,11 +602,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = THGNetwork/Info.plist;
+				INFOPLIST_FILE = ELReachability/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.theholygrail.THGNetwork;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -621,11 +621,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = THGNetwork/Info.plist;
+				INFOPLIST_FILE = ELReachability/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.theholygrail.THGNetwork;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -634,9 +634,9 @@
 		228698291B7D48B100BE8A26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = THGNetworkTests/Info.plist;
+				INFOPLIST_FILE = ELReachabilityTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.theholygrail.THGNetworkTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachabilityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -644,9 +644,9 @@
 		2286982A1B7D48B100BE8A26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = THGNetworkTests/Info.plist;
+				INFOPLIST_FILE = ELReachabilityTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.theholygrail.THGNetworkTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachabilityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -656,9 +656,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = THGNetworkExample/Info.plist;
+				INFOPLIST_FILE = ELReachabilityExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.theholygrail.THGNetworkExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachabilityExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -668,9 +668,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = THGNetworkExample/Info.plist;
+				INFOPLIST_FILE = ELReachabilityExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.theholygrail.THGNetworkExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachabilityExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -679,11 +679,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = THGNetworkExampleTests/Info.plist;
+				INFOPLIST_FILE = ELReachabilityExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.theholygrail.THGNetworkExampleTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachabilityExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/THGNetworkExample.app/THGNetworkExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ELReachabilityExample.app/ELReachabilityExample";
 			};
 			name = Debug;
 		};
@@ -691,22 +691,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = THGNetworkExampleTests/Info.plist;
+				INFOPLIST_FILE = ELReachabilityExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.theholygrail.THGNetworkExampleTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachabilityExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/THGNetworkExample.app/THGNetworkExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ELReachabilityExample.app/ELReachabilityExample";
 			};
 			name = Release;
 		};
 		228698621B7D63EA00BE8A26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = THGNetworkExampleUITests/Info.plist;
+				INFOPLIST_FILE = ELReachabilityExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.theholygrail.THGNetworkExampleUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachabilityExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = THGNetworkExample;
+				TEST_TARGET_NAME = ELReachabilityExample;
 				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
@@ -714,11 +714,11 @@
 		228698631B7D63EA00BE8A26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = THGNetworkExampleUITests/Info.plist;
+				INFOPLIST_FILE = ELReachabilityExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.theholygrail.THGNetworkExampleUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachabilityExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = THGNetworkExample;
+				TEST_TARGET_NAME = ELReachabilityExample;
 				USES_XCTRUNNER = YES;
 			};
 			name = Release;
@@ -726,7 +726,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2286980B1B7D48B100BE8A26 /* Build configuration list for PBXProject "THGNetwork" */ = {
+		2286980B1B7D48B100BE8A26 /* Build configuration list for PBXProject "ELReachability" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				228698231B7D48B100BE8A26 /* Debug */,
@@ -735,7 +735,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		228698251B7D48B100BE8A26 /* Build configuration list for PBXNativeTarget "THGNetwork" */ = {
+		228698251B7D48B100BE8A26 /* Build configuration list for PBXNativeTarget "ELReachability" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				228698261B7D48B100BE8A26 /* Debug */,
@@ -744,7 +744,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		228698281B7D48B100BE8A26 /* Build configuration list for PBXNativeTarget "THGNetworkTests" */ = {
+		228698281B7D48B100BE8A26 /* Build configuration list for PBXNativeTarget "ELReachabilityTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				228698291B7D48B100BE8A26 /* Debug */,
@@ -753,7 +753,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2286985B1B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "THGNetworkExample" */ = {
+		2286985B1B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "ELReachabilityExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2286985C1B7D63EA00BE8A26 /* Debug */,
@@ -761,7 +761,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		2286985E1B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "THGNetworkExampleTests" */ = {
+		2286985E1B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "ELReachabilityExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2286985F1B7D63EA00BE8A26 /* Debug */,
@@ -769,7 +769,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		228698611B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "THGNetworkExampleUITests" */ = {
+		228698611B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "ELReachabilityExampleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				228698621B7D63EA00BE8A26 /* Debug */,

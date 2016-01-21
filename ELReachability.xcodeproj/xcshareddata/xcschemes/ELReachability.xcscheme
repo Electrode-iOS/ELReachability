@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "228698101B7D48B100BE8A26"
-               BuildableName = "THGNetwork.framework"
-               BlueprintName = "THGNetwork"
-               ReferencedContainer = "container:THGNetwork.xcodeproj">
+               BuildableName = "ELReachability.framework"
+               BlueprintName = "ELReachability"
+               ReferencedContainer = "container:ELReachability.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2286981A1B7D48B100BE8A26"
-               BuildableName = "THGNetworkTests.xctest"
-               BlueprintName = "THGNetworkTests"
-               ReferencedContainer = "container:THGNetwork.xcodeproj">
+               BuildableName = "ELReachabilityTests.xctest"
+               BlueprintName = "ELReachabilityTests"
+               ReferencedContainer = "container:ELReachability.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "228698101B7D48B100BE8A26"
-            BuildableName = "THGNetwork.framework"
-            BlueprintName = "THGNetwork"
-            ReferencedContainer = "container:THGNetwork.xcodeproj">
+            BuildableName = "ELReachability.framework"
+            BlueprintName = "ELReachability"
+            ReferencedContainer = "container:ELReachability.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "228698101B7D48B100BE8A26"
-            BuildableName = "THGNetwork.framework"
-            BlueprintName = "THGNetwork"
-            ReferencedContainer = "container:THGNetwork.xcodeproj">
+            BuildableName = "ELReachability.framework"
+            BlueprintName = "ELReachability"
+            ReferencedContainer = "container:ELReachability.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "228698101B7D48B100BE8A26"
-            BuildableName = "THGNetwork.framework"
-            BlueprintName = "THGNetwork"
-            ReferencedContainer = "container:THGNetwork.xcodeproj">
+            BuildableName = "ELReachability.framework"
+            BlueprintName = "ELReachability"
+            ReferencedContainer = "container:ELReachability.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

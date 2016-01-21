@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  THGNetworkExample
+//  ELReachabilityExample
 //
 //  Created by Sam Grover on 8/13/15.
 //  Copyright © 2015 The Holy Grail. All rights reserved.

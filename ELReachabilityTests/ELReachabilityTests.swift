@@ -1,15 +1,15 @@
 //
-//  THGNetworkTests.swift
-//  THGNetworkTests
+//  ELReachabilityTests.swift
+//  ELReachabilityTests
 //
 //  Created by Sam Grover on 8/13/15.
 //  Copyright © 2015 The Holy Grail. All rights reserved.
 //
 
 import XCTest
-@testable import THGNetwork
+@testable import ELReachability
 
-class THGNetworkTests: XCTestCase {
+class ELReachabilityTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

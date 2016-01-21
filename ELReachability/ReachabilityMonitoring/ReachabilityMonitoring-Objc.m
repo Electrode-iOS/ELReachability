@@ -1,6 +1,6 @@
 //
 //  ReachabilityMonitoring-Objc.m
-//  THGNetwork
+//  ELReachability
 //
 //  Created by Brandon Sneed on 4/2/15.
 //  Copyright (c) 2015 Set Direction. All rights reserved.

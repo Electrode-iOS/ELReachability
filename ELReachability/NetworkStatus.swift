@@ -1,6 +1,6 @@
 //
 //  NetworkStatus.swift
-//  THGNetwork
+//  ELReachability
 //
 //  Created by Sam Grover on 8/13/15.
 //  Copyright © 2015 The Holy Grail. All rights reserved.
@@ -44,7 +44,7 @@ public struct NetworkStatusInterpreter {
 
 public typealias NetworkStatusCallbackClosure = (networkStatusInterpreter: NetworkStatusInterpreter) -> Void
 
-@objc(THGNetworkStatus)
+@objc(ELReachabilityStatus)
 public final class NetworkStatus: NSObject {
     private let reachability: SCNetworkReachability
     

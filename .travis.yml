@@ -2,4 +2,4 @@ language: objective-c
 osx_image: xcode7.2
 
 script:
-   - xctool -project THGNetwork.xcodeproj -scheme THGNetwork -sdk iphonesimulator build test
+   - xctool -project ELReachability.xcodeproj -scheme ELReachability -sdk iphonesimulator build test
