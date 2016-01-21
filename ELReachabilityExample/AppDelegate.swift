@@ -3,7 +3,7 @@
 //  ELReachabilityExample
 //
 //  Created by Sam Grover on 8/13/15.
-//  Copyright © 2015 The Holy Grail. All rights reserved.
+//  Copyright © 2015 WalmartLabs. All rights reserved.
 //
 
 import UIKit
