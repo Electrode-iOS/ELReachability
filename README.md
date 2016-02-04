@@ -1,6 +1,6 @@
 # ELReachability [![Build Status](https://travis-ci.org/Electrode-iOS/ELReachability.svg)](https://travis-ci.org/Electrode-iOS/ELReachability)
 
-ELReachability (`ELReachability` framework) is a simple Swift API for checking network reachability. `ELReachability` is also designed to work well with, and to utilize other libraries in [Electrode-iOS](https://github.com/Electrode-iOS), or THG for short.
+`ELReachability` is a simple Swift API for checking network reachability. `ELReachability` is also designed to work well with, and to utilize other libraries in [Electrode-iOS](https://github.com/Electrode-iOS), or THG for short.
 
 ## Usage
 
@@ -10,16 +10,19 @@ Setting up and checking reachability to the internet
 
 ```Swift
 // Create a Reachability instance
-let theInternets = Reachability.reachabilityForInternetConnection()
+let theInternets = NetworkStatus.networkStatusForInternetConnection()
 
 // Set up a callback
-theInternets.startMonitoring { (reachable) -> Void in
+theInternets.startNetworkStatusMonitoring { (reachable) -> Void in
     println("Internet reachability: \(reachable.isReachable)")
     println("Using celular: \(reachable.isCellular)")
 }
 
 // Synchronous check
 println("Reachability to internet: \(theInternets.reachable.isReachable)")
+
+// Stop monitoring
+theInternets.stopNetworkStatusMonitoring()
 ```
 
 ## Contributions
@@ -27,15 +30,6 @@ println("Reachability to internet: \(theInternets.reachable.isReachable)")
 We appreciate your contributions to all of our projects and look forward to interacting with you via Pull Requests, the issue tracker, via Twitter, etc.  We're happy to help you, and to have you help us.  We'll strive to answer every PR and issue and be very transparent in what we do.
 
 When contributing code, please refer to our [Dennis](https://github.com/Electrode-iOS/Dennis).
-
-###### THG's Primary Contributors
-
-Dr. Sneed (@bsneed)<br>
-Steve Riggins (@steveriggins)<br>
-Sam Grover (@samgrover)<br>
-Angelo Di Paolo (@angelodipaolo)<br>
-Cody Garvin (@migs647)<br>
-Wes Ostler (@wesostler)<br>
 
 ## License
 

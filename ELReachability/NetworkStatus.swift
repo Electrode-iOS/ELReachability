@@ -44,7 +44,7 @@ public struct NetworkStatusInterpreter {
 
 public typealias NetworkStatusCallbackClosure = (networkStatusInterpreter: NetworkStatusInterpreter) -> Void
 
-@objc(ELReachabilityStatus)
+@objc(ELNetworkStatus)
 public final class NetworkStatus: NSObject {
     private let reachability: SCNetworkReachability
     
