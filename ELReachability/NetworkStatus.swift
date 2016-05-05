@@ -9,10 +9,10 @@
 import Foundation
 import SystemConfiguration
 
-@asmname("objc_startMonitoring")
+@_silgen_name("objc_startMonitoring")
 internal func objc_startMonitoring(_: SCNetworkReachability, _: dispatch_block_t) -> ObjCBool
 
-@asmname("objc_stopMonitoring")
+@_silgen_name("objc_stopMonitoring")
 internal func objc_stopMonitoring(_: SCNetworkReachability) -> ObjCBool
 
 public struct NetworkStatusInterpreter {
