@@ -1,4 +1,7 @@
-# ELReachability [![Build Status](https://travis-ci.org/Electrode-iOS/ELReachability.svg)](https://travis-ci.org/Electrode-iOS/ELReachability)
+# ELReachability
+
+[![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://github.com/Electrode-iOS/ELReachability/releases/latest)
+[![Build Status](https://travis-ci.org/Electrode-iOS/ELReachability.svg)](https://travis-ci.org/Electrode-iOS/ELReachability)
 
 `ELReachability` is a simple Swift API for checking network reachability. `ELReachability` is also designed to work well with, and to utilize other libraries in [Electrode-iOS](https://github.com/Electrode-iOS), or THG for short.
 
@@ -25,17 +28,11 @@ println("Reachability to internet: \(theInternets.reachable.isReachable)")
 theInternets.stopNetworkStatusMonitoring()
 ```
 
-## Contributions
-
-We appreciate your contributions to all of our projects and look forward to interacting with you via Pull Requests, the issue tracker, via Twitter, etc.  We're happy to help you, and to have you help us.  We'll strive to answer every PR and issue and be very transparent in what we do.
-
-When contributing code, please refer to our [Dennis](https://github.com/Electrode-iOS/Dennis).
-
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Walmart, WalmartLabs, and other Contributors
+Copyright (c) 2015-2016 Walmart, WalmartLabs, and other Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
