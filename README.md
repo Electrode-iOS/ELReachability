@@ -1,7 +1,7 @@
 # ELReachability
 
 [![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://github.com/Electrode-iOS/ELReachability/releases/latest)
-[![Build Status](https://travis-ci.org/Electrode-iOS/ELReachability.svg)](https://travis-ci.org/Electrode-iOS/ELReachability)
+[![Build Status](https://travis-ci.org/Electrode-iOS/ELReachability.svg?branch=master)](https://travis-ci.org/Electrode-iOS/ELReachability)
 
 `ELReachability` is a simple Swift API for checking network reachability. `ELReachability` is also designed to work well with, and to utilize other libraries in [Electrode-iOS](https://github.com/Electrode-iOS), or THG for short.
 
