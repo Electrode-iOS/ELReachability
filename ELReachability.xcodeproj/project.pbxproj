@@ -333,13 +333,15 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "WalmartLabs";
+				ORGANIZATIONNAME = WalmartLabs;
 				TargetAttributes = {
 					228698101B7D48B100BE8A26 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 					2286981A1B7D48B100BE8A26 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 					228698351B7D63EA00BE8A26 = {
 						CreatedOnToolsVersion = 7.0;
@@ -610,6 +612,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -628,6 +631,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -638,6 +642,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachabilityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -648,6 +653,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachabilityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -760,6 +766,7 @@
 				2286985D1B7D63EA00BE8A26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2286985E1B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "ELReachabilityExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -768,6 +775,7 @@
 				228698601B7D63EA00BE8A26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		228698611B7D63EA00BE8A26 /* Build configuration list for PBXNativeTarget "ELReachabilityExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -776,6 +784,7 @@
 				228698631B7D63EA00BE8A26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
