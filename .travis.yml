@@ -2,4 +2,4 @@ language: objective-c
 osx_image: xcode8
 
 script:
-   - xcodebuild -project ELReachability.xcodeproj -scheme ELReachability -sdk iphonesimulator test -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0'
+   - xcodebuild -project ELReachability.xcodeproj -scheme ELReachability -sdk iphonesimulator test -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' CODE_SIGNING_REQUIRED=NO
