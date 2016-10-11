@@ -10,7 +10,7 @@ import Foundation
 import SystemConfiguration
 
 @_silgen_name("objc_startMonitoring")
-internal func objc_startMonitoring(_: SCNetworkReachability, _: dispatch_block_t) -> ObjCBool
+internal func objc_startMonitoring(_: SCNetworkReachability, _: ()->()) -> ObjCBool
 
 @_silgen_name("objc_stopMonitoring")
 internal func objc_stopMonitoring(_: SCNetworkReachability) -> ObjCBool
@@ -21,10 +21,10 @@ public struct NetworkStatusInterpreter {
     
     /// Returns `true` when the network is reachable. `false` otherwise.
     public var isReachable: Bool {
-        var isReachable = flags.contains(SCNetworkReachabilityFlags.Reachable)
+        var isReachable = flags.contains(SCNetworkReachabilityFlags.reachable)
         
         // Check that this is not an oddity as per https://github.com/tonymillion/Reachability/blob/master/Reachability.m
-        if flags.contains(SCNetworkReachabilityFlags.ConnectionRequired) || flags.contains(SCNetworkReachabilityFlags.TransientConnection) {
+        if flags.contains(SCNetworkReachabilityFlags.connectionRequired) || flags.contains(SCNetworkReachabilityFlags.transientConnection) {
             isReachable = false
         }
         return isReachable
@@ -32,7 +32,7 @@ public struct NetworkStatusInterpreter {
     
     /// Returns `true` when the network is reachable via a cellular connection. `false` otherwise. Note: This check may give false negatives.
     public var isCellular: Bool {
-        return flags.contains(SCNetworkReachabilityFlags.IsWWAN)
+        return flags.contains(SCNetworkReachabilityFlags.isWWAN)
     }
     
     /// Returns `true` when the network is reachable via a WiFi connection. `false` otherwise. Note: This check may give false negatives.
@@ -42,7 +42,7 @@ public struct NetworkStatusInterpreter {
     
 }
 
-public typealias NetworkStatusCallbackClosure = (networkStatusInterpreter: NetworkStatusInterpreter) -> Void
+public typealias NetworkStatusCallbackClosure = (_ networkStatusInterpreter: NetworkStatusInterpreter) -> Void
 
 @objc(ELNetworkStatus)
 public final class NetworkStatus: NSObject {
@@ -55,12 +55,20 @@ public final class NetworkStatus: NSObject {
     - returns: The `NetworkStatus` object.
     */
     public class func networkStatusForInternetConnection() -> NetworkStatus? {
-        var zeroAddress = sockaddr_in(sin_len: __uint8_t(0), sin_family: sa_family_t(0), sin_port: in_port_t(0), sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
-        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+        var zeroAddress = sockaddr_in(sin_len: __uint8_t(0),
+                                      sin_family: sa_family_t(0),
+                                      sin_port: in_port_t(0),
+                                      sin_addr: in_addr(s_addr: 0),
+                                      sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
+        zeroAddress.sin_len = UInt8(MemoryLayout<sockaddr_in>.size)
         zeroAddress.sin_family = sa_family_t(AF_INET)
+
         
-        let reachabilityRef = withUnsafePointer(&zeroAddress) {
-            SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, UnsafePointer($0))
+        let reachabilityRef = withUnsafePointer(to: &zeroAddress) {
+
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {
+                SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, $0)
+            }
         }
         
         if let reachabilityRef = reachabilityRef {
@@ -86,11 +94,11 @@ public final class NetworkStatus: NSObject {
     - parameter callback: The closure that will be called when reachability changes.
     - returns: `true` if the monitoring was set up. `false` otherwise.
     */
-    public func startNetworkStatusMonitoring(callback: NetworkStatusCallbackClosure) -> Bool {
+    public func startNetworkStatusMonitoring(_ callback: NetworkStatusCallbackClosure) -> Bool {
         let monitoringStarted =  objc_startMonitoring(reachability) { () -> Void in
             var flags = SCNetworkReachabilityFlags(rawValue:0)
             SCNetworkReachabilityGetFlags(self.reachability, &flags)
-            callback(networkStatusInterpreter: NetworkStatusInterpreter(flags: flags))
+            callback(NetworkStatusInterpreter(flags: flags))
         }
         
         return monitoringStarted.boolValue
@@ -100,7 +108,7 @@ public final class NetworkStatus: NSObject {
     Call this method to remove any callback associated with an instance.
     */
     public func stopNetworkStatusMonitoring() {
-        objc_stopMonitoring(reachability)
+        _ = objc_stopMonitoring(reachability)
     }
     
     // MARK: Synchronous API methods
