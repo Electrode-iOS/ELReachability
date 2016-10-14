@@ -16,8 +16,7 @@ internal func objc_startMonitoring(_: SCNetworkReachability, _: dispatch_block_t
 internal func objc_stopMonitoring(_: SCNetworkReachability) -> ObjCBool
 
 /// The network connection enumeration describes the possible connection types that can be identified.
-@objc(ELNetworkConnection)
-public enum NetworkConnection : Int {
+public enum NetworkConnection {
     case cellular, wifi
 
     init?(flags: SCNetworkReachabilityFlags) {
