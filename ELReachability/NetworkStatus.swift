@@ -41,7 +41,7 @@ public struct NetworkStatusInterpreter {
     /// The actual flags reported by the system. This is used to compute if the network is reachable.
     public let flags: SCNetworkReachabilityFlags
 
-    /// The network connection type, or `nil` if the network is not reachable.
+    /// The network connection type, or `nil` if the network is not reachable. Note: This property may give false negatives.
     public let connection: NetworkConnection?
 
     internal init(flags: SCNetworkReachabilityFlags) {
