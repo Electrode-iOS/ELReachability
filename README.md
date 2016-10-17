@@ -11,18 +11,34 @@
 
 Setting up and checking reachability to the internet
 
-```Swift
+```swift
 // Create a Reachability instance
 let theInternets = NetworkStatus.networkStatusForInternetConnection()
 
 // Set up a callback
-theInternets.startNetworkStatusMonitoring { (reachable) -> Void in
-    println("Internet reachability: \(reachable.isReachable)")
-    println("Using celular: \(reachable.isCellular)")
+theInternets.startNetworkStatusMonitoring { status in
+    guard let connection = status.connection else {
+        print("Internet is not reachable")
+        return
+    }
+
+    switch connection {
+        case .cellular:
+            print("Internet is reachable via cellular connection")
+        case .wifi:
+            print("Internet is reachable via WiFi connection")
+    }
 }
 
 // Synchronous check
-println("Reachability to internet: \(theInternets.reachable.isReachable)")
+switch theInternets.connection {
+    case nil:
+        print("Internet is not reachable")
+    case .cellular?:
+        print("Internet is reachable via cellular connection")
+    case .wifi?:
+        print("Internet is reachable via WiFi connection")
+}
 
 // Stop monitoring
 theInternets.stopNetworkStatusMonitoring()

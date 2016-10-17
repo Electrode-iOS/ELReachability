@@ -12,35 +12,46 @@ import ELReachability
 class ViewController: UIViewController {
     let theInternets: NetworkStatus?
 
+    required init?(coder aDecoder: NSCoder) {
+        theInternets = NetworkStatus.networkStatusForInternetConnection()
+
+        super.init(coder: aDecoder)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Set up a callback
-        if let theInternets = theInternets {
-            theInternets.startNetworkStatusMonitoring { (reachable) -> Void in
-                print("[Callback] Is Reachable: \(reachable.isReachable)")
-                print("[Callback] Is Cellular : \(reachable.isCellular)")
-                print("[Callback] Is WiFi : \(reachable.isWiFi)")
+        theInternets?.startNetworkStatusMonitoring { status in
+            guard let connection = status.connection else {
+                print("Internet is not reachable")
+                return
+            }
+
+            switch connection {
+            case .cellular:
+                print("Internet is reachable via cellular conneciton")
+            case .wifi:
+                print("Internet is reachable via WiFi conneciton")
             }
         }
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        theInternets = NetworkStatus.networkStatusForInternetConnection()
-        
-        super.init(coder: aDecoder)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func checkNetworkStatus() {
-        if let theInternets = theInternets {
-            print("[Synchronous] Is Reachable: \(theInternets.isReachable())")
-            print("[Synchronous] Is Cellular : \(theInternets.isCellular())")
-            print("[Synchronous] Is WiFi : \(theInternets.isWiFi())")
+        guard let theInternets = theInternets else {
+            return
+        }
+
+        guard let connection = theInternets.connection else {
+            print("[Synchronous] Internet is not reachable")
+            return
+        }
+
+        switch connection {
+        case .cellular:
+            print("[Synchronous] Internet is reachable via cellular conneciton")
+        case .wifi:
+            print("[Synchronous] Internet is reachable via WiFi conneciton")
         }
     }
 

@@ -15,31 +15,54 @@ internal func objc_startMonitoring(_: SCNetworkReachability, _: dispatch_block_t
 @_silgen_name("objc_stopMonitoring")
 internal func objc_stopMonitoring(_: SCNetworkReachability) -> ObjCBool
 
+/// The network connection enumeration describes the possible connection types that can be identified.
+public enum NetworkConnection {
+    case cellular, wifi
+
+    init?(flags: SCNetworkReachabilityFlags) {
+        if !flags.contains(.Reachable) {
+            return nil
+        }
+
+        // Check that this is not an oddity as per https://github.com/tonymillion/Reachability/blob/master/Reachability.m
+        if flags.contains(.ConnectionRequired) || flags.contains(.TransientConnection) {
+            return nil
+        }
+
+        if flags.contains(.IsWWAN) {
+            self = .cellular
+        } else {
+            self = .wifi
+        }
+    }
+}
+
 public struct NetworkStatusInterpreter {
     /// The actual flags reported by the system. This is used to compute if the network is reachable.
     public let flags: SCNetworkReachabilityFlags
-    
+
+    /// The network connection type, or `nil` if the network is not reachable. Note: This property may give false negatives.
+    public let connection: NetworkConnection?
+
+    internal init(flags: SCNetworkReachabilityFlags) {
+        self.flags = flags
+        self.connection = NetworkConnection(flags: flags)
+    }
+
     /// Returns `true` when the network is reachable. `false` otherwise.
     public var isReachable: Bool {
-        var isReachable = flags.contains(SCNetworkReachabilityFlags.Reachable)
-        
-        // Check that this is not an oddity as per https://github.com/tonymillion/Reachability/blob/master/Reachability.m
-        if flags.contains(SCNetworkReachabilityFlags.ConnectionRequired) || flags.contains(SCNetworkReachabilityFlags.TransientConnection) {
-            isReachable = false
-        }
-        return isReachable
+        return connection != nil
     }
     
     /// Returns `true` when the network is reachable via a cellular connection. `false` otherwise. Note: This check may give false negatives.
     public var isCellular: Bool {
-        return flags.contains(SCNetworkReachabilityFlags.IsWWAN)
+        return connection == .cellular
     }
     
     /// Returns `true` when the network is reachable via a WiFi connection. `false` otherwise. Note: This check may give false negatives.
     public var isWiFi: Bool {
-        return self.isReachable && !self.isCellular
+        return connection == .wifi
     }
-    
 }
 
 public typealias NetworkStatusCallbackClosure = (networkStatusInterpreter: NetworkStatusInterpreter) -> Void
@@ -104,6 +127,11 @@ public final class NetworkStatus: NSObject {
     }
     
     // MARK: Synchronous API methods
+
+    /// The current network connection type, or `nil` if the network is not reachable.
+    public var connection: NetworkConnection? {
+        return self.networkStatusInterpreter.connection
+    }
     
     /// Returns `true` when the network is reachable. `false` otherwise. Calls corresponding method in `NetworkStatusInterpreter`.
     public func isReachable() -> Bool {
