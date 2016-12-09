@@ -337,7 +337,7 @@
 				TargetAttributes = {
 					228698101B7D48B100BE8A26 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 					2286981A1B7D48B100BE8A26 = {
 						CreatedOnToolsVersion = 7.0;
@@ -617,7 +617,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -636,7 +636,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.ELReachability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

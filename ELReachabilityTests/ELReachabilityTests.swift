@@ -13,10 +13,10 @@ import SystemConfiguration
 class ELReachabilityTests: XCTestCase {
     // Examples of various "real world" flag combinations.
     let offlineFlags: SCNetworkReachabilityFlags = []
-    let notConnectedFlags: SCNetworkReachabilityFlags = [.Reachable, .ConnectionRequired]
-    let transientFlags: SCNetworkReachabilityFlags = [.Reachable, .TransientConnection]
-    let cellularFlags: SCNetworkReachabilityFlags = [.Reachable, .IsWWAN]
-    let wifiFlags: SCNetworkReachabilityFlags = [.Reachable]
+    let notConnectedFlags: SCNetworkReachabilityFlags = [.reachable, .connectionRequired]
+    let transientFlags: SCNetworkReachabilityFlags = [.reachable, .transientConnection]
+    let cellularFlags: SCNetworkReachabilityFlags = [.reachable, .isWWAN]
+    let wifiFlags: SCNetworkReachabilityFlags = [.reachable]
 
     override func setUp() {
         super.setUp()
