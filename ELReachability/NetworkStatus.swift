@@ -83,7 +83,9 @@ public final class NetworkStatus: NSObject {
         zeroAddress.sin_family = sa_family_t(AF_INET)
 
         let reachabilityRef = withUnsafePointer(to: &zeroAddress) {
-            SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, UnsafePointer($0))
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1, { (ptr) -> SCNetworkReachability? in
+                            return SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, ptr)
+            })
         }
 
         if let reachabilityRef = reachabilityRef {
