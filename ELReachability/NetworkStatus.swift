@@ -111,8 +111,8 @@ public final class NetworkStatus: NSObject {
     - parameter callback: The closure that will be called when reachability changes.
     - returns: `true` if the monitoring was set up. `false` otherwise.
     */
-    public func startNetworkStatusMonitoring(_ callback: NetworkStatusCallbackClosure) -> Bool {
-        let monitoringStarted =  objc_startMonitoring(reachability) { () -> Void in
+    public func startNetworkStatusMonitoring(_ callback: @escaping NetworkStatusCallbackClosure) -> Bool {
+        let monitoringStarted = objc_startMonitoring(reachability) { () -> Void in
             var flags = SCNetworkReachabilityFlags(rawValue:0)
             SCNetworkReachabilityGetFlags(self.reachability, &flags)
             callback(NetworkStatusInterpreter(flags: flags))
