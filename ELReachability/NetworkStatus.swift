@@ -10,7 +10,7 @@ import Foundation
 import SystemConfiguration
 
 @_silgen_name("objc_startMonitoring")
-internal func objc_startMonitoring(_: SCNetworkReachability, _: ()->()) -> ObjCBool
+internal func objc_startMonitoring(_: SCNetworkReachability, _: @convention(block)()->Void) -> ObjCBool
 
 @_silgen_name("objc_stopMonitoring")
 internal func objc_stopMonitoring(_: SCNetworkReachability) -> ObjCBool
