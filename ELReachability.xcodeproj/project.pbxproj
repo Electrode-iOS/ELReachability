@@ -337,7 +337,7 @@
 				TargetAttributes = {
 					228698101B7D48B100BE8A26 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 					};
 					2286981A1B7D48B100BE8A26 = {
 						CreatedOnToolsVersion = 7.0;
@@ -345,13 +345,16 @@
 					};
 					228698351B7D63EA00BE8A26 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 					};
 					228698481B7D63EA00BE8A26 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 						TestTargetID = 228698351B7D63EA00BE8A26;
 					};
 					228698531B7D63EA00BE8A26 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 						TestTargetID = 228698351B7D63EA00BE8A26;
 					};
 				};
