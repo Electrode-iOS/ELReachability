@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Set up a callback
-        theInternets?.startNetworkStatusMonitoring { status in
+        _ = theInternets?.startNetworkStatusMonitoring { status in
             guard let connection = status.connection else {
                 print("Internet is not reachable")
                 return
